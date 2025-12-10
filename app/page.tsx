@@ -201,75 +201,75 @@ export default function Home() {
           </div>
         )}
       </nav>
-      <main className="flex flex-col gap-8 w-full max-w-5xl px-4 md:px-8 justify-center items-center transition-colors duration-300 pt-32 pb-20 relative z-10">
+      <main className="flex flex-col gap-6 sm:gap-8 w-full max-w-5xl px-3 sm:px-4 md:px-8 justify-center items-center transition-colors duration-300 pt-24 sm:pt-32 pb-16 sm:pb-20 relative z-10">
         <div className="w-full">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-12 md:py-20">
-            <div className="flex flex-col gap-8 justify-center items-center lg:items-start order-2 lg:order-1">
-              <div className="space-y-6 text-center lg:text-left">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center py-8 sm:py-12 md:py-20">
+            <div className="flex flex-col gap-6 sm:gap-8 justify-center items-center lg:items-start order-1 lg:order-1 min-w-0">
+              <div className="space-y-4 sm:space-y-6 text-center lg:text-left w-full text-pretty">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] break-words">
                   <span className="text-white">Sold out? </span>
                   <span className="relative inline-block">
                     <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
                       Not for you
                     </span>
-                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400/0 via-yellow-400/80 to-yellow-400/0 rounded-full"></span>
+                    <span className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-yellow-400/0 via-yellow-400/80 to-yellow-400/0 rounded-full"></span>
                   </span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-zinc-400 leading-relaxed max-w-xl">
+                <p className="text-base sm:text-lg md:text-xl text-zinc-400 leading-relaxed break-words mx-auto lg:mx-0">
                   Wake up to order confirmations. Our bots checkout for you automatically and send success notifications straight to your Discord DMs.
                 </p>
               </div>
               <DiscordAnimatedList className="w-full bg-transparent" />
             </div>
 
-            <div className="flex flex-col gap-10 justify-center order-1 lg:order-2">
-              <div className="space-y-6">
-                <div className="space-y-4">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight text-white leading-tight">
+            <div className="flex flex-col gap-6 sm:gap-10 justify-center items-center lg:items-start order-2 lg:order-2 min-w-0">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="space-y-3 sm:space-y-4 text-center lg:text-left text-balance">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tight text-white leading-tight">
                     Join 1,000+ members inside
                   </h2>
-                  <p className="text-base md:text-md text-zinc-400 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-md text-zinc-400 leading-relaxed">
                     Stop missing out on limited releases. Our automated checkout service runs 24/7 across <span className="font-bold text-white">Target, Walmart, Best Buy, Pokémon Center, and more</span>, so you never have to worry about sold-out drops again. <br/><br/>
                     ACO not for you? We have <span className="font-bold text-white">lightning-fast monitors, early information, and expert guides</span> to keep you ahead of the game.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 py-4">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 py-3 sm:py-4">
                   <div className="text-center space-y-1">
-                    <div className="text-xl md:text-2xl font-bold text-white">5★ Community</div>
-                    <div className="text-xs md:text-sm text-zinc-400">Rated by 30+ members</div>
+                    <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">5★ Community</div>
+                    <div className="text-[10px] sm:text-xs md:text-sm text-zinc-400">Rated by 30+ members</div>
                   </div>
                   <div className="text-center space-y-1">
-                    <div className="text-xl md:text-2xl font-bold text-white">$0 due today</div>
-                    <div className="text-xs md:text-sm text-zinc-400">No strings attached</div>
+                    <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">$0 due today</div>
+                    <div className="text-[10px] sm:text-xs md:text-sm text-zinc-400">No strings attached</div>
                   </div>
                 </div>
               </div>
 
-              <div className="flex flex-col justify-center items-center space-y-4">
+              <div className="flex flex-col justify-center items-center space-y-3 sm:space-y-4 w-full">
                 <a
                   href="https://discord.gg/EFV9kGC3n4"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-[75%]"
+                  className="block w-full"
                 >
                   <Button
                     size="lg"
-                    className="w-full text-sm h-14 rounded-full font-semibold bg-white hover:bg-zinc-100 text-zinc-900 shadow-lg hover:shadow-xl transition-[transform,background-color,box-shadow] duration-300 hover:scale-[101%] cursor-pointer"
+                    className="w-full text-xs sm:text-sm h-12 sm:h-14 rounded-full font-semibold bg-white hover:bg-zinc-100 text-zinc-900 shadow-lg hover:shadow-xl transition-[transform,background-color,box-shadow] duration-300 hover:scale-[101%] cursor-pointer"
                   >
                     Join Discord
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
                   </Button>
                 </a>
                 <a
                   href="#pricing"
-                  className="block w-[75%]"
+                  className="block w-full"
                 >
                   <Button
                     size="lg"
                     variant="outline"
-                    className="w-full text-sm h-14 rounded-full font-semibold bg-transparent hover:bg-zinc-900 text-white border-zinc-700 hover:border-zinc-600 transition-all duration-300 cursor-pointer"
+                    className="w-full text-xs sm:text-sm h-12 sm:h-14 rounded-full font-semibold bg-transparent hover:bg-zinc-900 text-white border-zinc-700 hover:border-zinc-600 transition-all duration-300 cursor-pointer"
                   >
                     View Pricing Plans
                   </Button>
@@ -279,31 +279,31 @@ export default function Home() {
           </div>
         </div>
         <div className="inline-block">
-          <span className="px-4 py-2 rounded-full bg-zinc-900/30 backdrop-blur-sm text-zinc-400 text-xs font-medium tracking-widest uppercase border border-zinc-800/50">
+          <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-zinc-900/30 backdrop-blur-sm text-zinc-400 text-[10px] sm:text-xs font-medium tracking-widest uppercase border border-zinc-800/50">
             OVERVIEW
           </span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 pt-3 sm:pt-4">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`group relative p-6 rounded-3xl bg-linear-to-br ${feature.gradient} backdrop-blur-sm transition-all duration-300 hover:scale-[101%] border ${feature.border} shadow-xl hover:shadow-2xl overflow-hidden`}
+                className={`group relative p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-linear-to-br ${feature.gradient} backdrop-blur-sm transition-all duration-300 hover:scale-[101%] border ${feature.border} shadow-xl hover:shadow-2xl overflow-hidden`}
               >
                 <div className="absolute inset-0 bg-linear-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10 space-y-4">
-                  <div className={`p-3 rounded-2xl ${feature.iconBg} w-fit shadow-lg`}>
-                    <feature.Icon className={`h-5 w-5 ${feature.iconColor}`} />
+                <div className="relative z-10 space-y-3 sm:space-y-4">
+                  <div className={`p-2 sm:p-3 rounded-xl sm:rounded-2xl ${feature.iconBg} w-fit shadow-lg`}>
+                    <feature.Icon className={`h-4 sm:h-5 w-4 sm:w-5 ${feature.iconColor}`} />
                   </div>
-                  <h3 className="text-lg font-light text-white">{feature.name}</h3>
-                  <p className="text-sm text-zinc-400 leading-relaxed">
+                  <h3 className="text-base sm:text-lg font-light text-white">{feature.name}</h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
                     {feature.description}
                   </p>
                   <a
                     href={feature.href}
-                    className={`inline-flex items-center text-sm font-medium ${feature.iconColor} hover:opacity-80 transition-all duration-300 group/link`}
+                    className={`inline-flex items-center text-xs sm:text-sm font-medium ${feature.iconColor} hover:opacity-80 transition-all duration-300 group/link`}
                   >
                     {feature.cta}
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-1.5 sm:ml-2 h-3 sm:h-4 w-3 sm:w-4" />
                   </a>
                 </div>
               </div>
@@ -311,21 +311,21 @@ export default function Home() {
           </div>
         <section
           id="features"
-          className="flex flex-col gap-16 w-full pt-18 justify-center items-center"
+          className="flex flex-col gap-16 pt-18 justify-center items-center w-full"
         >
-          <div className="text-center space-y-8 max-w-4xl mx-auto">
+          <div className="text-center space-y-8 mx-auto w-full">
             <div className="inline-block">
               <span className="px-4 py-2 rounded-full bg-zinc-900/30 backdrop-blur-sm text-zinc-400 text-xs font-medium tracking-widest uppercase border border-zinc-800/50">
                 FEATURES
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-tight">
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-light text-white tracking-tight px-3 sm:px-4">
               Supported Site Monitors & ACO
             </h2>
-            <p className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-sm md:text-lg text-zinc-400 mx-auto leading-relaxed text-wrap">
               Never miss a restock with instant notifications and automated checkouts. We specialize in these retailers to maximize your success.
             </p>
-            <div className="w-full">
+            <div className="w-full overflow-hidden">
               <LogoCarousel />
             </div>
             <WorkflowSteps
@@ -373,7 +373,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="w-full space-y-14 pt-8">
+          <div className="space-y-14 pt-8">
             <div className="text-center space-y-4">
               <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">
                 Real-time Discord Alerts
@@ -407,7 +407,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto w-full">
+          <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto w-full">
             <div className="relative group overflow-hidden rounded-2xl bg-linear-to-br from-zinc-900/50 to-zinc-900/30 backdrop-blur-xl border border-zinc-800/50 shadow-2xl hover:shadow-xl hover:border-zinc-700/50 transition-all duration-300 hover:scale-[101%]">
               <img
                 src="/IMG_2868.jpg"

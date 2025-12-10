@@ -1,6 +1,6 @@
 "use client"
 
-import LogoLoop from "../ui/LogoLoop"
+import { Marquee } from "../ui/marquee"
 
 const testimonials = [
   {
@@ -43,24 +43,24 @@ const testimonials = [
 
 function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
   return (
-    <div className="relative w-[350px] rounded-2xl bg-linear-to-br from-zinc-900/50 to-zinc-900/30 backdrop-blur-xl border border-zinc-800/50 p-6 shadow-xl hover:border-zinc-700/50 transition-all duration-300">
-      <div className="flex items-center gap-1 mb-4">
+    <div className="relative w-[280px] sm:w-[320px] md:w-[350px] rounded-2xl bg-linear-to-br from-zinc-900/50 to-zinc-900/30 backdrop-blur-xl border border-zinc-800/50 p-4 sm:p-6 shadow-xl hover:border-zinc-700/50 transition-all duration-300">
+      <div className="flex items-center gap-1 mb-3 sm:mb-4">
         {[...Array(testimonial.rating)].map((_, i) => (
           <svg
             key={i}
-            className="w-5 h-5 text-yellow-400 fill-current"
+            className="w-4 sm:w-5 h-4 sm:h-5 text-yellow-400 fill-current"
             viewBox="0 0 20 20"
           >
             <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
           </svg>
         ))}
       </div>
-      <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+      <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
         "{testimonial.content}"
       </p>
-      <div className="border-t border-zinc-800/50 pt-4">
-        <p className="text-white font-semibold text-sm">{testimonial.name}</p>
-        <p className="text-zinc-500 text-xs">{testimonial.role}</p>
+      <div className="border-t border-zinc-800/50 pt-3 sm:pt-4">
+        <p className="text-white font-semibold text-xs sm:text-sm">{testimonial.name}</p>
+        <p className="text-zinc-500 text-[10px] sm:text-xs">{testimonial.role}</p>
       </div>
     </div>
   )
@@ -105,40 +105,19 @@ const testimonials2 = [
   },
 ]
 
-// Convert testimonials to LogoLoop format
-const testimonialsRow1 = testimonials.map((testimonial) => ({
-  node: <TestimonialCard testimonial={testimonial} />,
-}))
-
-const testimonialsRow2 = testimonials2.map((testimonial) => ({
-  node: <TestimonialCard testimonial={testimonial} />,
-}))
-
 export default function TestimonialsCarousel() {
   return (
     <div className="w-full space-y-4">
-      <LogoLoop
-        logos={testimonialsRow1}
-        speed={40}
-        direction="left"
-        logoHeight={20}
-        gap={16}
-        hoverSpeed={0}
-        fadeOut
-        fadeOutColor="transparent"
-        ariaLabel="Customer Testimonials"
-      />
-      <LogoLoop
-        logos={testimonialsRow2}
-        speed={40}
-        direction="right"
-        logoHeight={20}
-        gap={16}
-        hoverSpeed={0}
-        fadeOut
-        fadeOutColor="transparent"
-        ariaLabel="Customer Testimonials"
-      />
+      <Marquee pauseOnHover className="[--duration:40s] [--gap:1rem]">
+        {testimonials.map((testimonial, index) => (
+          <TestimonialCard key={index} testimonial={testimonial} />
+        ))}
+      </Marquee>
+      <Marquee pauseOnHover reverse className="[--duration:40s] [--gap:1rem]">
+        {testimonials2.map((testimonial, index) => (
+          <TestimonialCard key={index} testimonial={testimonial} />
+        ))}
+      </Marquee>
     </div>
   )
 }

@@ -53,7 +53,7 @@ const Notification = ({ name, description, icon, color, time, productImage }: It
   return (
     <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full max-w-[500px] cursor-pointer overflow-hidden rounded-2xl p-4" ,
+        "relative mx-auto w-full max-w-[500px] cursor-pointer overflow-hidden rounded-2xl p-4" ,
         // animation styles
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
         // glassmorphic dark card
@@ -64,7 +64,7 @@ const Notification = ({ name, description, icon, color, time, productImage }: It
         <div className="bg-yellow-500 w-1 min-h-[60px] rounded-full self-stretch" />
 
         <div
-          className="flex size-12 shrink-0 items-center justify-center rounded-xl"
+          className="flex size-8 sm:size-12 shrink-0 items-center justify-center rounded-xl"
           style={{
             backgroundColor: color,
           }}
@@ -72,7 +72,7 @@ const Notification = ({ name, description, icon, color, time, productImage }: It
           <img
             src={icon}
             alt="Discord"
-            className="size-6 brightness-0 invert"
+            className="size-4 sm:size-6 brightness-0 invert"
           />
         </div>
 
@@ -88,7 +88,7 @@ const Notification = ({ name, description, icon, color, time, productImage }: It
         </div>
 
         {productImage && (
-          <div className="shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-white/5 border border-white/10">
+          <div className="shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-xl overflow-hidden bg-white/5 border border-white/10">
             <img
               src={productImage}
               alt={description}
