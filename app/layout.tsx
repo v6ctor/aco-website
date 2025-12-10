@@ -3,8 +3,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "My App",
-  description: "A modern app using Next.js and Tailwind.",
+  title: "TCG Dungeon",
+  description: "Pokemon Discord Community for collectors, resellers, and anyone in between.",
 };
 
 export default function RootLayout({
