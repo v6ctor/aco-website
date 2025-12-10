@@ -192,7 +192,7 @@ export default function ContactPage() {
               Our community and support team are ready to help. Join Discord to get instant answers and connect with other TCG collectors.
             </p>
             <a
-              href="https://discord.gg/"
+              href="https://discord.gg/EFV9kGC3n4"
               target="_blank"
               rel="noopener noreferrer"
             >

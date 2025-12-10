@@ -19,7 +19,7 @@ export default function LogoCarousel() {
         logos={imageLogos}
         speed={40}
         direction="left"
-        logoHeight={180}
+        logoHeight={120}
         gap={40}
         hoverSpeed={0}
         scaleOnHover

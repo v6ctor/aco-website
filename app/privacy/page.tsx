@@ -45,7 +45,7 @@ export default function PrivacyPage() {
 
             <div className="hidden md:flex items-center">
               <a
-                href="https://discord.gg/"
+                href="https://discord.gg/EFV9kGC3n4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-zinc-100 text-zinc-900 rounded-full font-medium text-sm transition-all duration-300">
@@ -208,7 +208,7 @@ export default function PrivacyPage() {
               If you have any questions about this Privacy Policy or our data practices, please contact us:
             </p>
             <ul className="list-none space-y-2 pl-4">
-              <li>Discord: Join our server at <a href="https://discord.gg/" className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">discord.gg/tcgdungeon</a></li>
+              <li>Discord: Join our server at <a href="https://discord.gg/EFV9kGC3n4" className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">https://discord.gg/EFV9kGC3n4</a></li>
               <li>Support: Create a ticket in our #support channel</li>
             </ul>
           </section>

@@ -61,10 +61,8 @@ const Notification = ({ name, description, icon, color, time, productImage }: It
       )}
     >
       <div className="flex flex-row items-center gap-4">
-        {/* Status indicator bar */}
-        <div className="bg-green-500 w-1 min-h-[60px] rounded-full self-stretch" />
+        <div className="bg-yellow-500 w-1 min-h-[60px] rounded-full self-stretch" />
 
-        {/* Discord icon */}
         <div
           className="flex size-12 shrink-0 items-center justify-center rounded-xl"
           style={{
@@ -78,7 +76,6 @@ const Notification = ({ name, description, icon, color, time, productImage }: It
           />
         </div>
 
-        {/* Content */}
         <div className="flex flex-col overflow-hidden flex-1 gap-1">
           <figcaption className="flex flex-row items-center whitespace-pre text-white">
             <span className="text-sm sm:text-base font-semibold">{name}</span>
@@ -90,7 +87,6 @@ const Notification = ({ name, description, icon, color, time, productImage }: It
           </p>
         </div>
 
-        {/* Product image */}
         {productImage && (
           <div className="shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-white/5 border border-white/10">
             <img

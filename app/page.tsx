@@ -24,7 +24,7 @@ export default function Home() {
       gradient: "from-slate-700/10 to-slate-800/10",
       iconColor: "text-slate-300 dark:text-slate-400",
       iconBg: "bg-slate-700/10 dark:bg-slate-700/20",
-      border: "border-slate-600/50 dark:border-slate-700/20",
+      border: "border-yellow-600/50 dark:border-slate-700/20",
     },
     {
       Icon: DatabaseZap,
@@ -201,7 +201,7 @@ export default function Home() {
           </div>
         )}
       </nav>
-      <main className="flex flex-col gap-8 w-full max-w-7xl px-4 md:px-8 justify-center items-center transition-colors duration-300 pt-32 pb-20 relative z-10">
+      <main className="flex flex-col gap-8 w-full max-w-5xl px-4 md:px-8 justify-center items-center transition-colors duration-300 pt-32 pb-20 relative z-10">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-12 md:py-20">
             <div className="flex flex-col gap-8 justify-center items-center lg:items-start order-2 lg:order-1">
@@ -209,10 +209,10 @@ export default function Home() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                   <span className="text-white">Sold out? </span>
                   <span className="relative inline-block">
-                    <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-green-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                    <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
                       Not for you
                     </span>
-                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-green-400/0 via-green-400/80 to-green-400/0 rounded-full"></span>
+                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400/0 via-yellow-400/80 to-yellow-400/0 rounded-full"></span>
                   </span>
                 </h1>
 
@@ -220,43 +220,43 @@ export default function Home() {
                   Wake up to order confirmations. Our bots checkout for you automatically and send success notifications straight to your Discord DMs.
                 </p>
               </div>
-              <DiscordAnimatedList className="w-full" />
+              <DiscordAnimatedList className="w-full bg-transparent" />
             </div>
 
             <div className="flex flex-col gap-10 justify-center order-1 lg:order-2">
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-white leading-tight">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight text-white leading-tight">
                     Join 1,000+ members inside
                   </h2>
-                  <p className="text-base md:text-lg text-zinc-400 leading-relaxed">
-                    Stop missing out on limited releases. Our automated checkout service runs 24/7 across Target, Walmart, Best Buy, Pokémon Center, and more, so you never have to worry about sold-out drops again. <br/><br/>
-                    ACO not for you? We have lightning-fast monitors, early information, and expert guides to keep you ahead of the game.
+                  <p className="text-base md:text-md text-zinc-400 leading-relaxed">
+                    Stop missing out on limited releases. Our automated checkout service runs 24/7 across <span className="font-bold text-white">Target, Walmart, Best Buy, Pokémon Center, and more</span>, so you never have to worry about sold-out drops again. <br/><br/>
+                    ACO not for you? We have <span className="font-bold text-white">lightning-fast monitors, early information, and expert guides</span> to keep you ahead of the game.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 py-4">
-                  <div className="text-center space-y-1 border-x border-zinc-800">
-                    <div className="text-2xl md:text-3xl font-bold text-white">5★ Community</div>
-                    <div className="text-xs md:text-sm text-zinc-400">Rated by 30+ Members</div>
+                  <div className="text-center space-y-1">
+                    <div className="text-xl md:text-2xl font-bold text-white">5★ Community</div>
+                    <div className="text-xs md:text-sm text-zinc-400">Rated by 30+ members</div>
                   </div>
-                  <div className="text-center space-y-1 border-x border-zinc-800">
-                    <div className="text-2xl md:text-3xl font-bold text-white">$0</div>
-                    <div className="text-xs md:text-sm text-zinc-400">Free Access</div>
+                  <div className="text-center space-y-1">
+                    <div className="text-xl md:text-2xl font-bold text-white">$0 due today</div>
+                    <div className="text-xs md:text-sm text-zinc-400">No strings attached</div>
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="flex flex-col justify-center items-center space-y-4">
                 <a
-                  href="https://discord.gg/"
+                  href="https://discord.gg/EFV9kGC3n4"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full"
+                  className="block w-[75%]"
                 >
                   <Button
                     size="lg"
-                    className="w-full text-sm h-14 rounded-full font-semibold bg-white hover:bg-zinc-100 text-zinc-900 shadow-lg hover:shadow-xl transition-[transform,background-color,box-shadow] duration-300 hover:scale-[102%]"
+                    className="w-full text-sm h-14 rounded-full font-semibold bg-white hover:bg-zinc-100 text-zinc-900 shadow-lg hover:shadow-xl transition-[transform,background-color,box-shadow] duration-300 hover:scale-[101%] cursor-pointer"
                   >
                     Join Discord
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -264,12 +264,12 @@ export default function Home() {
                 </a>
                 <a
                   href="#pricing"
-                  className="block w-full"
+                  className="block w-[75%]"
                 >
                   <Button
                     size="lg"
                     variant="outline"
-                    className="w-full text-sm h-14 rounded-full font-semibold bg-transparent hover:bg-zinc-900 text-white border-zinc-700 hover:border-zinc-600 transition-all duration-300"
+                    className="w-full text-sm h-14 rounded-full font-semibold bg-transparent hover:bg-zinc-900 text-white border-zinc-700 hover:border-zinc-600 transition-all duration-300 cursor-pointer"
                   >
                     View Pricing Plans
                   </Button>
@@ -283,11 +283,11 @@ export default function Home() {
             OVERVIEW
           </span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`group relative p-8 rounded-3xl bg-linear-to-br ${feature.gradient} backdrop-blur-sm transition-all duration-300 hover:scale-[102%] border ${feature.border} shadow-xl hover:shadow-2xl overflow-hidden`}
+                className={`group relative p-6 rounded-3xl bg-linear-to-br ${feature.gradient} backdrop-blur-sm transition-all duration-300 hover:scale-[101%] border ${feature.border} shadow-xl hover:shadow-2xl overflow-hidden`}
               >
                 <div className="absolute inset-0 bg-linear-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10 space-y-4">
@@ -311,7 +311,7 @@ export default function Home() {
           </div>
         <section
           id="features"
-          className="flex flex-col gap-16 w-full pt-32 justify-center items-center"
+          className="flex flex-col gap-16 w-full pt-18 justify-center items-center"
         >
           <div className="text-center space-y-8 max-w-4xl mx-auto">
             <div className="inline-block">
@@ -319,13 +319,15 @@ export default function Home() {
                 FEATURES
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-tight">
               Supported Site Monitors & ACO
             </h2>
             <p className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
               Never miss a restock with instant notifications and automated checkouts. We specialize in these retailers to maximize your success.
             </p>
-
+            <div className="w-full">
+              <LogoCarousel />
+            </div>
             <WorkflowSteps
               steps={[
                 {
@@ -371,11 +373,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="w-full">
-            <LogoCarousel />
-          </div>
-
-          <div className="w-full space-y-14 pt-6">
+          <div className="w-full space-y-14 pt-8">
             <div className="text-center space-y-4">
               <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">
                 Real-time Discord Alerts
@@ -384,8 +382,7 @@ export default function Home() {
                 Get instant notifications with detailed product information, stock levels, and quick purchase links
               </p>
             </div>
-            <div className="flex flex-col md:flex-row gap-4 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
-              <MonitorNotification />
+            <div className="flex flex-col gap-4 overflow-x-auto md:overflow-visible">
               <MonitorNotification
                 productImage="\GUEST_e4b750a2-a6c6-4a5f-a485-259bb3da3245.avif"
                 productName="Pokémon Trading Card Game: Scarlet & Violet—Prismatic Evolutions Elite Trainer Box"
@@ -400,7 +397,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center space-y-6 pt-24">
+          <div className="text-center space-y-6 pt-8">
             <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">
               Accurate TPCi Vending Machine <br className="hidden md:block" />
               Restock Schedules
@@ -410,7 +407,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-12 max-w-4xl mx-auto w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto w-full">
             <div className="relative group overflow-hidden rounded-2xl bg-linear-to-br from-zinc-900/50 to-zinc-900/30 backdrop-blur-xl border border-zinc-800/50 shadow-2xl hover:shadow-xl hover:border-zinc-700/50 transition-all duration-300 hover:scale-[101%]">
               <img
                 src="/IMG_2868.jpg"
@@ -430,7 +427,7 @@ export default function Home() {
 
         <section
           id="testimonials"
-          className="flex flex-col gap-16 w-full pt-32 justify-center items-center"
+          className="flex flex-col gap-16 w-full pt-18 justify-center items-center"
         >
           <div className="text-center space-y-8 max-w-4xl mx-auto">
             <div className="inline-block">
@@ -438,7 +435,7 @@ export default function Home() {
                 TESTIMONIALS
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-tight">
               Aren't convinced yet? See what our members are saying
             </h2>
             <p className="text-lg md:text-xl text-zinc-300 leading-relaxed">
@@ -453,7 +450,7 @@ export default function Home() {
 
         <section
           id="pricing"
-          className="flex flex-col gap-16 w-full pt-32 justify-center items-center"
+          className="flex flex-col gap-16 w-full pt-18 justify-center items-center"
         >
           <div className="text-center space-y-8 max-w-4xl mx-auto">
             <div className="inline-block">
@@ -461,7 +458,7 @@ export default function Home() {
                 PRICING
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-tight">
               Choose Your Plan
             </h2>
             <p className="text-lg md:text-xl text-zinc-300 leading-relaxed">
@@ -590,7 +587,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-sm text-zinc-500">
-              © 2024 TCG Monitor. All rights reserved.
+              © 2024 TCG Dungeon. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-4 md:gap-8 justify-center md:justify-start">
               <a href="/privacy" className="text-sm text-zinc-500 hover:text-white transition-all duration-300">

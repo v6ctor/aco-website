@@ -34,12 +34,9 @@ export function MonitorNotification({
   return (
     <div className={cn("w-full max-w-xl mx-auto", className)}>
       <div className="relative group bg-linear-to-br from-zinc-900/50 to-zinc-900/30 backdrop-blur-xl rounded-2xl overflow-hidden border border-zinc-800/50 shadow-2xl hover:shadow-xl hover:border-zinc-700/50 transition-all duration-300 hover:scale-[101%]">
-        {/* Content */}
         <div className="p-4">
           <div className="flex gap-4">
-            {/* Accent Bar */}
             <div className="w-1 rounded-full shrink-0" style={{ backgroundColor: accentColor }} />
-            {/* Main Content */}
             <div className="flex-1 min-w-0">
               <div className="flex flex-row justify-between">
                 <div>
@@ -69,7 +66,6 @@ export function MonitorNotification({
                 </div>
               </div>
 
-              {/* Product Info */}
               <div className="flex gap-4">
                 <div className="flex-1 space-y-3">
                   <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
