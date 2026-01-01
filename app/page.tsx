@@ -8,31 +8,9 @@ import { DiscordAnimatedList } from "@/components/DiscordList/Notifications"
 import { MonitorNotification } from "@/components/Monitor/MonitorNotification"
 import { WorkflowSteps } from "@/components/Workflow/WorkflowSteps"
 import TestimonialsCarousel from "@/components/Testimonials/TestimonialsCarousel"
-import { createClient } from "@/lib/supabase/client"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const supabase = createClient()
-
-  const handleDashboardClick = async (e: React.MouseEvent) => {
-    e.preventDefault()
-
-    // Check if user is already logged in
-    const { data: { user } } = await supabase.auth.getUser()
-
-    if (user) {
-      // User is logged in, redirect to dashboard
-      window.location.href = '/dashboard'
-    } else {
-      // User not logged in, trigger Discord OAuth
-      await supabase.auth.signInWithOAuth({
-        provider: 'discord',
-        options: {
-          redirectTo: `${window.location.origin}/api/auth/callback?next=/dashboard`,
-        },
-      })
-    }
-  }
 
   const features = [
     {
@@ -132,17 +110,13 @@ export default function Home() {
             </div>
 
             <div className="hidden md:flex items-center">
-              <button
-                onClick={handleDashboardClick}
+              <a
+                href="https://sonarsolution.app/dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-zinc-100 text-zinc-900 rounded-full font-medium text-sm transition-all duration-300 cursor-pointer">
-                <img
-                  src="/Discord-Symbol-Black.svg"
-                  alt=""
-                  className="h-3.5 w-3.5"
-                  aria-hidden="true"
-                />
                 <span>Dashboard</span>
-              </button>
+              </a>
             </div>
 
             <button
@@ -203,21 +177,15 @@ export default function Home() {
               >
                 Pricing
               </a>
-              <button
-                onClick={(e) => {
-                  setMobileMenuOpen(false)
-                  handleDashboardClick(e)
-                }}
+              <a
+                href="https://sonarsolution.app/dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white hover:bg-zinc-100 text-zinc-900 rounded-full font-medium text-sm transition-all duration-300 mt-2 cursor-pointer"
               >
-                <img
-                  src="/Discord-Symbol-Black.svg"
-                  alt=""
-                  className="h-3.5 w-3.5"
-                  aria-hidden="true"
-                />
                 <span>Dashboard</span>
-              </button>
+              </a>
             </div>
           </div>
         )}
