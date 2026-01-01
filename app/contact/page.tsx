@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 export default function ContactPage() {
   return (
     <div className="flex flex-col relative justify-center items-center min-h-screen transition-colors duration-300 bg-zinc-950 overflow-hidden">
-      {/* Subtle Gradient Orbs Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none opacity-30">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl"></div>
         <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
@@ -65,7 +64,6 @@ export default function ContactPage() {
       </nav>
 
       <main className="flex flex-col gap-12 w-full max-w-4xl px-4 md:px-8 justify-center items-start transition-colors duration-300 pt-32 pb-20 relative z-10">
-        {/* Header */}
         <div className="w-full text-center space-y-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight">
             Contact Us
@@ -75,9 +73,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        {/* Contact Methods */}
         <div className="w-full grid md:grid-cols-2 gap-6">
-          {/* Discord Support */}
           <div className="p-8 rounded-3xl bg-gradient-to-br from-zinc-900/50 to-zinc-900/30 backdrop-blur-sm border border-zinc-800/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[102%] hover:border-zinc-700/50">
             <div className="space-y-6">
               <div className="p-4 rounded-2xl bg-indigo-500/10 w-fit">
@@ -104,7 +100,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Support Ticket */}
           <div className="p-8 rounded-3xl bg-gradient-to-br from-zinc-900/50 to-zinc-900/30 backdrop-blur-sm border border-zinc-800/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[102%] hover:border-zinc-700/50">
             <div className="space-y-6">
               <div className="p-4 rounded-2xl bg-emerald-500/10 w-fit">
@@ -132,7 +127,6 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* FAQ Section */}
         <div className="w-full space-y-6 pt-8">
           <div className="text-center space-y-2">
             <h2 className="text-3xl md:text-4xl font-light text-white tracking-tight">
@@ -144,7 +138,6 @@ export default function ContactPage() {
           </div>
 
           <div className="space-y-4">
-            {/* FAQ Item */}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-zinc-900/50 to-zinc-900/30 backdrop-blur-sm border border-zinc-800/50">
               <h3 className="text-lg font-semibold text-white mb-2">How do I get started with ACO?</h3>
               <p className="text-zinc-400 leading-relaxed">
@@ -181,8 +174,6 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-
-        {/* Bottom CTA */}
         <div className="w-full text-center space-y-6 pt-8">
           <div className="p-8 rounded-3xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-blue-500/20">
             <h3 className="text-2xl font-semibold text-white mb-3">
@@ -203,8 +194,6 @@ export default function ContactPage() {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
       <footer className="w-full py-16 border-t border-zinc-800/50 relative z-10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">

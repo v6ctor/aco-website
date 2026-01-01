@@ -8,9 +8,31 @@ import { DiscordAnimatedList } from "@/components/DiscordList/Notifications"
 import { MonitorNotification } from "@/components/Monitor/MonitorNotification"
 import { WorkflowSteps } from "@/components/Workflow/WorkflowSteps"
 import TestimonialsCarousel from "@/components/Testimonials/TestimonialsCarousel"
+import { createClient } from "@/lib/supabase/client"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const supabase = createClient()
+
+  const handleDashboardClick = async (e: React.MouseEvent) => {
+    e.preventDefault()
+
+    // Check if user is already logged in
+    const { data: { user } } = await supabase.auth.getUser()
+
+    if (user) {
+      // User is logged in, redirect to dashboard
+      window.location.href = '/dashboard'
+    } else {
+      // User not logged in, trigger Discord OAuth
+      await supabase.auth.signInWithOAuth({
+        provider: 'discord',
+        options: {
+          redirectTo: `${window.location.origin}/api/auth/callback?next=/dashboard`,
+        },
+      })
+    }
+  }
 
   const features = [
     {
@@ -110,11 +132,9 @@ export default function Home() {
             </div>
 
             <div className="hidden md:flex items-center">
-              <a
-                href="https://discord.gg/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-zinc-100 text-zinc-900 rounded-full font-medium text-sm transition-all duration-300">
+              <button
+                onClick={handleDashboardClick}
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-zinc-100 text-zinc-900 rounded-full font-medium text-sm transition-all duration-300 cursor-pointer">
                 <img
                   src="/Discord-Symbol-Black.svg"
                   alt=""
@@ -122,7 +142,7 @@ export default function Home() {
                   aria-hidden="true"
                 />
                 <span>Dashboard</span>
-              </a>
+              </button>
             </div>
 
             <button
@@ -183,11 +203,12 @@ export default function Home() {
               >
                 Pricing
               </a>
-              <a
-                href="https://discord.gg/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white hover:bg-zinc-100 text-zinc-900 rounded-full font-medium text-sm transition-all duration-300 mt-2"
+              <button
+                onClick={(e) => {
+                  setMobileMenuOpen(false)
+                  handleDashboardClick(e)
+                }}
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white hover:bg-zinc-100 text-zinc-900 rounded-full font-medium text-sm transition-all duration-300 mt-2 cursor-pointer"
               >
                 <img
                   src="/Discord-Symbol-Black.svg"
@@ -196,7 +217,7 @@ export default function Home() {
                   aria-hidden="true"
                 />
                 <span>Dashboard</span>
-              </a>
+              </button>
             </div>
           </div>
         )}
@@ -217,7 +238,7 @@ export default function Home() {
                 </h1>
 
                 <p className="text-base sm:text-lg md:text-xl text-zinc-400 leading-relaxed break-words mx-auto lg:mx-0">
-                  Wake up to order confirmations. Our bots checkout for you automatically and send success notifications straight to your Discord DMs.
+                  Wake up to order confirmations. Our staff helps you checkout automatically and send success notifications straight to your Discord DMs.
                 </p>
               </div>
               <DiscordAnimatedList className="w-full bg-transparent" />
@@ -346,7 +367,7 @@ export default function Home() {
                 {
                   number: 2,
                   title: "Lightning-Fast ACO",
-                  description: "Our bots monitor retailers 24/7 and checkout in seconds when products drop. We target high-profit items but also take requests.",
+                  description: "We monitor retailers 24/7 and checkout in seconds when products drop. We target high-profit items but also take requests.",
                   color: "blue-500",
                   iconBg: "bg-blue-500/10",
                   hoverBorder: "border-blue-500/30",
@@ -359,7 +380,7 @@ export default function Home() {
                 {
                   number: 3,
                   title: "Instant Confirmation",
-                  description: "After our bots checkout, you'll receive Discord DM notifications with your order confirmation. No more refreshing pages or checking emails, you'll know you secured your item within seconds of the drop.",
+                  description: "After we checkout for you, you'll receive Discord DM notifications with your order confirmation. No more refreshing pages or checking emails, you'll know you secured your item within seconds of the drop.",
                   color: "purple-500",
                   iconBg: "bg-purple-500/10",
                   hoverBorder: "border-purple-500/30",
@@ -504,7 +525,7 @@ export default function Home() {
                     <svg className="w-5 h-5 text-zinc-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-zinc-300">Expert release & bot help support</span>
+                    <span className="text-zinc-300">Expert release & checkout support</span>
                   </li>
                 </ul>
               </div>
