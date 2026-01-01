@@ -111,7 +111,7 @@ export default function Home() {
 
             <div className="hidden md:flex items-center">
               <a
-                href="https://sonarsolution.app/dashboard"
+                href="https://sonarsolutions.app/dashboard"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-zinc-100 text-zinc-900 rounded-full font-medium text-sm transition-all duration-300 cursor-pointer">
@@ -178,7 +178,7 @@ export default function Home() {
                 Pricing
               </a>
               <a
-                href="https://sonarsolution.app/dashboard"
+                href="https://sonarsolutions.app/dashboard"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
